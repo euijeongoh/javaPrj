@@ -1,0 +1,47 @@
+package main;
+
+import mob.Pairi;
+import mob.Pikachu;
+import mob.Pokemon;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		System.out.println("====포켓몬====");
+	
+//		Pikachu pokemon = new Pikachu("피카츄", 100, 30, 10);
+//			System.out.println(pokemon.toString());
+//			
+//			pokemon.bodyAttack();
+//			pokemon.skill();
+//			
+//		Pairi s = new Pairi("파이리", 99, 33, 8);
+//		System.out.println(s.toString());
+//		
+//		s.bodyAttack();
+//		s.skill();
+		
+		Pokemon[]x = new Pokemon[2];
+		x[0] = new Pikachu ("피카츄", 100, 30, 10);
+		x[1] = new Pairi ("파이리", 99, 33, 8);
+		x[0].bodyAttack();
+		x[1].bodyAttack();
+		
+		
+		for(int i = 0; i < x.length; i++) {
+			System.out.println(x[i].toString());
+		}
+		
+		for(int i = 0; i < x.length; i++) {
+			x[i].bodyAttack();
+		}
+		
+		for(int i = 0; i < x.length; i++) {
+			x[i].skill();
+		}
+	
+	
+	} //main
+
+} //class
