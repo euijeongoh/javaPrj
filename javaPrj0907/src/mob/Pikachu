@@ -1,0 +1,12 @@
+package mob;
+
+public class Pikachu extends Pokemon {
+
+	public Pikachu(String name, int hp, int atk, int def) {
+		super("피카츄", 100, 30, 10);
+	}
+
+	public void skill() {
+		System.out.println(name + "의 전기");
+	}
+}
