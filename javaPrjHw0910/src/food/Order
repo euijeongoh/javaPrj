@@ -1,0 +1,30 @@
+package food;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Order {
+    private List<MenuItem> items;
+    private double total;
+
+    public Order() {
+        this.items = new ArrayList<>();
+        this.total = 0.0;
+    }
+
+    public void addItem(MenuItem item) {
+        items.add(item);
+        total += item.getPrice(); // MenuItem에서 getPrice() 메소드를 호출하여 가격을 누적
+    }
+    public double getTotal() {
+        return total;
+    }
+
+    public void display() {
+        System.out.println("주문 내역:");
+        for (MenuItem item : items) {
+            System.out.println(item.getName() + " - $" + item.getPrice());
+        }
+        System.out.println("총 가격: " + total);
+    }
+}
