@@ -1,0 +1,41 @@
+package food;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Kiosk {
+    private List<MenuItem> menu;
+    private Order currentOrder;
+
+    public Kiosk() {
+        this.menu = new ArrayList<>();
+        this.currentOrder = new Order();
+    }
+
+    public void displayMenu() {
+        System.out.println("메뉴:");
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem item = menu.get(i);
+            System.out.println(item.getName() + " - " + item.getPrice());
+        }
+    }
+
+    public void takeOrder(String menuItemName) {
+        for (MenuItem menuItem : menu) {
+            if (menuItem.getName().equalsIgnoreCase(menuItemName)) {
+                currentOrder.addItem(menuItem);
+                System.out.println(menuItem.getName() + "이(가) 주문에 추가되었습니다.");
+                return;
+            }
+        }
+        System.out.println("다시 입력해주세요");
+    }
+
+    public void displayOrder() {
+        currentOrder.display();
+    }
+
+    public void addToMenu(MenuItem item) {
+        menu.add(item);
+    }
+}
