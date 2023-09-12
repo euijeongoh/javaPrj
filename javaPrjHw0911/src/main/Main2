@@ -9,7 +9,7 @@ public static void main(String[] args) {
 		System.out.println("복습~");
 		
 		//여러개의 객체를 관리할 변수
-		ArrayList<Menu>menuList = new ArrayList<Menu>();
+		ArrayList<Menu>menuList = new ArrayList<Menu>(); //이 ArrayList는 Menu만 들어갈 수 있구나 하고 타입 제한이 걸린 것 <>
 		
 		//메뉴 객체 (데이터는 아무렇게나) 여러개 만들고, 위에서 만든 컬렉션에 담기
 		menuList.add(new Menu ("아메리카노", 1500));
